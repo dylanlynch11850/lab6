@@ -12,6 +12,7 @@ export class Read extends React.Component {
         //url we are going too 
         //there is a fall back option available here also 
         
+        //seperate domains
         axios.get('http://localhost:4000/api/books')
             .then((response) => {
                 this.setState({ books: response.data.myBooks })
