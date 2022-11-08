@@ -37,7 +37,7 @@ export class Create extends React.Component {
             author: ''
         })
 
-
+//made an object called book
        const book = {
         title: this.state.title,
         cover: this.state.cover,
@@ -45,7 +45,7 @@ export class Create extends React.Component {
 
        }
         
-
+//used to send up to the server 
             axios.post('http://localhost:4000/api/books',book);
 
             this.setState ({
