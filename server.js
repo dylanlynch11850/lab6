@@ -26,6 +26,10 @@ app.post('/api/books', (req, res) =>{
     res.send('Books added');
 })
 
+
+//listening for a get method, then they run the callback functions 
+// we have an array of objects below
+//res is short for response, req is request
 app.get('/api/books', (req, res) =>{
     const books = [
         {
@@ -67,6 +71,8 @@ app.get('/api/books', (req, res) =>{
         }
         
     ];
+  
+  //axios calling this part 
     res.status(200).json({
         myBooks:books
     })
