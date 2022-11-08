@@ -14,11 +14,15 @@ export class Read extends React.Component {
         
         //seperate domains
         axios.get('http://localhost:4000/api/books')
+        
+        //furfilled request, other wised called a promise then it excutes this function then updates are state
+        //axios looks after the promise 
             .then((response) => {
                 this.setState({ books: response.data.myBooks })
             })
 
             //Catch Method
+        
             .catch((error)=>{
                 console.log(error); //error handling
             })
